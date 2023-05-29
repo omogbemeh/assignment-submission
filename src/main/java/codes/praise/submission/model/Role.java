@@ -10,7 +10,6 @@ import java.util.Set;
 
 import static codes.praise.submission.model.Permission.*;
 
-@RequiredArgsConstructor
 public enum Role {
     STUDENT(Collections.emptySet()),
     CODE_REVIEWER(
@@ -23,6 +22,10 @@ public enum Role {
     ),
     ADMIN(
             Set.of(
+                    CODE_REVIEWER_CREATE,
+                    CODE_REVIEWER_READ,
+                    CODE_REVIEWER_UPDATE,
+                    CODE_REVIEWER_DELETE,
                     ADMIN_CREATE,
                     ADMIN_READ,
                     ADMIN_UPDATE,
