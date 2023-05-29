@@ -2,7 +2,7 @@ package codes.praise.submission.codereviewer;
 
 import codes.praise.submission.assignment.Assignment;
 import codes.praise.submission.model.Role;
-import codes.praise.submission.model.User;
+import codes.praise.submission.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 

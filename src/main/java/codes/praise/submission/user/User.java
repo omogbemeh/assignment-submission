@@ -1,5 +1,6 @@
-package codes.praise.submission.model;
+package codes.praise.submission.user;
 
+import codes.praise.submission.model.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,11 +18,13 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.*;
 
-@MappedSuperclass
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Data
+@Entity
+@Table(name = "_user")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User implements UserDetails, Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
